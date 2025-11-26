@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
+import Login from './Login';
 const Navbar = () => {
 
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
@@ -50,7 +51,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w2-5 p-2 shadow">
                 {NavItem}
               </ul>
             </div>
@@ -106,7 +107,12 @@ const Navbar = () => {
               </svg>
             </label>
             <div className="">
-              <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer">login</a>
+              <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
+              onClick={()=>document.getElementById("my_modal_3").showModal()}
+              >
+              login
+              </a>
+              <Login/>
             </div>
           </div>
         </div>
