@@ -6,7 +6,6 @@ import list from '../../public/list.json';
 import Cards from './Cards';
 const FreeBook = () => {
   const filterData = list.filter((data) => data.category === "Free");
-  console.log(filterData);
   var settings = {
     dots: true,
     infinite: false,
